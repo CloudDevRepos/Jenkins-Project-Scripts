@@ -4,3 +4,4 @@ env
 vs_code
 .vs_code
 /target/
+.settings
