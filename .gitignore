@@ -1,0 +1,6 @@
+env
+.idea
+.DS_Store
+vs_code
+.vs_code
+/target/
