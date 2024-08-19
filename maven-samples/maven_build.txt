@@ -1,0 +1,99 @@
+Started by user Lawrence Lubwama
+Running as SYSTEM
+Building in workspace /Users/lawrencejews/.jenkins/workspace/Build_Java_Application
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /Users/lawrencejews/.jenkins/workspace/Build_Java_Application/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/CloudDevRepos/Jenkins-Project-Scripts.git # timeout=10
+Fetching upstream changes from https://github.com/CloudDevRepos/Jenkins-Project-Scripts.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.39.3 (Apple Git-146)'
+ > git fetch --tags --force --progress -- https://github.com/CloudDevRepos/Jenkins-Project-Scripts.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision 46e621e450a6ac6fb25eb66b74810610016d9471 (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 46e621e450a6ac6fb25eb66b74810610016d9471 # timeout=10
+Commit message: "updated pom file"
+ > git rev-list --no-walk 46e621e450a6ac6fb25eb66b74810610016d9471 # timeout=10
+[Build_Java_Application] $ /bin/sh -xe /var/folders/gd/kwry2pgx0js_yslmk2_zz1m00000gn/T/jenkins1612570029286514272.sh
++ export MAVEN_HOME=/opt/homebrew/Cellar/maven/3.9.9/libexec
++ MAVEN_HOME=/opt/homebrew/Cellar/maven/3.9.9/libexec
++ export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/Cellar/maven/3.9.9/libexec/bin
++ PATH=/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/Cellar/maven/3.9.9/libexec/bin
++ mvn --version
+Apache Maven 3.9.9 (8e8579a9e76f7d015ee5ec7bfcdc97d260186937)
+Maven home: /opt/homebrew/Cellar/maven/3.9.9/libexec
+Java version: 18, vendor: Oracle Corporation, runtime: /Users/lawrencejews/Library/Java/JavaVirtualMachines/openjdk-18/Contents/Home
+Default locale: en_KR, platform encoding: UTF-8
+OS name: "mac os x", version: "14.6.1", arch: "aarch64", family: "mac"
++ cd /Users/lawrencejews/.jenkins/workspace/Build_Java_Application/maven-samples/single-module
++ pwd
+/Users/lawrencejews/.jenkins/workspace/Build_Java_Application/maven-samples/single-module
++ ls
+pom.xml
+src
++ mvn clean install
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.example.maven-samples:single-module-project:jar:1.0-SNAPSHOT
+[WARNING] Reporting configuration should be done in <reporting> section, not in maven-site-plugin <configuration> as reportPlugins parameter. @ line 67, column 24
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[WARNING] The project com.example.maven-samples:single-module-project:jar:1.0-SNAPSHOT uses prerequisites which is only intended for maven-plugin projects but not for non maven-plugin projects. For such purposes you should use the maven-enforcer-plugin. See https://maven.apache.org/enforcer/enforcer-rules/requireMavenVersion.html
+[INFO] 
+[INFO] ----------< com.example.maven-samples:single-module-project >-----------
+[INFO] Building A Single Maven Module 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ single-module-project ---
+[INFO] 
+[INFO] --- resources:2.5:resources (default-resources) @ single-module-project ---
+[debug] execute contextualize
+[INFO] Using 'utf-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/lawrencejews/.jenkins/workspace/Build_Java_Application/maven-samples/single-module/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (default-compile) @ single-module-project ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /Users/lawrencejews/.jenkins/workspace/Build_Java_Application/maven-samples/single-module/target/classes
+[INFO] 
+[INFO] --- resources:2.5:testResources (default-testResources) @ single-module-project ---
+[debug] execute contextualize
+[INFO] Using 'utf-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/lawrencejews/.jenkins/workspace/Build_Java_Application/maven-samples/single-module/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ single-module-project ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /Users/lawrencejews/.jenkins/workspace/Build_Java_Application/maven-samples/single-module/target/test-classes
+[INFO] 
+[INFO] --- surefire:2.11:test (default-test) @ single-module-project ---
+[INFO] Surefire report directory: /Users/lawrencejews/.jenkins/workspace/Build_Java_Application/maven-samples/single-module/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.example.TestGreeter
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 sec
+
+Results :
+
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- jar:3.1.0:jar (default-jar) @ single-module-project ---
+[INFO] Building jar: /Users/lawrencejews/.jenkins/workspace/Build_Java_Application/maven-samples/single-module/target/single-module-project.jar
+[INFO] 
+[INFO] --- install:3.1.2:install (default-install) @ single-module-project ---
+[INFO] Installing /Users/lawrencejews/.jenkins/workspace/Build_Java_Application/maven-samples/single-module/pom.xml to /Users/lawrencejews/.m2/repository/com/example/maven-samples/single-module-project/1.0-SNAPSHOT/single-module-project-1.0-SNAPSHOT.pom
+[INFO] Installing /Users/lawrencejews/.jenkins/workspace/Build_Java_Application/maven-samples/single-module/target/single-module-project.jar to /Users/lawrencejews/.m2/repository/com/example/maven-samples/single-module-project/1.0-SNAPSHOT/single-module-project-1.0-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.170 s
+[INFO] Finished at: 2024-08-19T21:38:28+09:00
+[INFO] ------------------------------------------------------------------------
+Finished: SUCCESS
