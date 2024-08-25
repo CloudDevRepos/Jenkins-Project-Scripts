@@ -1,7 +1,57 @@
 env
+.env
 .idea
 .DS_Store
 vs_code
 .vs_code
 /target/
 .settings
+# Cache
+caches/
+
+# Fingerprint records
+fingerprints/
+
+# Working directories
+workspace/
+
+# Secret files
+secrets/
+secret.*
+*.enc
+*.key
+users/
+
+# State files
+*.state
+
+# Updates
+updates/
+
+# Plugins
+plugins/
+
+# Extracted jenkins.war
+war/
+
+# Job state files
+builds/
+nextBuildNumber
+
+# Indexing
+indexing/
+
+# Log files
+logs/
+*.log
+
+# Help files
+help/
+
+# Miscellaneous litter
+*.bak
+.nfs*
+.lastStarted
+.owner
+.timestamp
+queue.xml
